@@ -3,6 +3,9 @@ import './App.css';
 import BestPokemon from './BestPokemon';
 import CaughtPokemon from './CaughtPokemon';
 import Logo from './Logo';
+import PokemonCity from './PokemonCity';
+import PokemonMoves from './PokemonMoves';
+import PokemonMovesSelector from './PokemonMovesSelector';
 
 function App() {
    const abilities = ['Anticipation', 'Adaptability', 'Run-Away'];
@@ -13,9 +16,11 @@ function App() {
 }
   return (
     <div className="App">
-      <Logo  appName='Pokedex'logWhenClicked={}/>
+      <Logo  appName='Pokedex'logWhenClicked={logWhenClicked}/>
       <BestPokemon abilities={abilities}/>
       <CaughtPokemon d={date} />
+      <PokemonMovesSelector />
+      <PokemonCity />
       
     </div>
   );
